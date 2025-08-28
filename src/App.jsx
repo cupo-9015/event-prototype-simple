@@ -3,21 +3,21 @@ import { BrowserRouter as Router, Routes, Route, Link, useParams } from "react-r
 
 // Dummy Event Data
 const events = [
-  { id: 1, title: "Rock Konzert München", date: "2025-09-12", category: "Konzerte", location: "Olympiahalle München", image: "https://picsum.photos/400/200?random=1" },
-  { id: 2, title: "Theaterstück: Faust", date: "2025-09-15", category: "Theater", location: "Residenztheater München", image: "https://picsum.photos/400/200?random=2" },
-  { id: 3, title: "Kunstausstellung: Moderne Kunst", date: "2025-09-18", category: "Ausstellungen", location: "Pinakothek der Moderne", image: "https://picsum.photos/400/200?random=3" },
+  { id: 1, title: "Rok Koncert Trebinje", date: "2025-09-12", category: "Koncerti", location: "Dom omladine Trebinje", image: "https://picsum.photos/400/200?random=1" },
+  { id: 2, title: "Pozorišna predstava: Moji mali hrčki", date: "2025-09-15", category: "Pozorište", location: "Dom kulture Trebinje", image: "https://picsum.photos/400/200?random=2" },
+  { id: 3, title: "Umjetnička izložba: Moderna umjetnost", date: "2025-09-18", category: "Izložbe", location: "Muzej Hercegovine Trebinje", image: "https://picsum.photos/400/200?random=3" },
 ];
 
 // Navigation
 function Navbar() {
   return (
     <nav className="bg-blue-900 text-white p-4 flex justify-between">
-      <h1 className="text-xl font-bold">Eventseite</h1>
+      <h1 className="text-xl font-bold">Aktuelno u Trebinju</h1>
       <div className="space-x-4">
-        <Link to="/">Startseite</Link>
-        <Link to="/events">Veranstaltungen</Link>
-        <Link to="/calendar">Kalender</Link>
-        <Link to="/about">Über uns</Link>
+        <Link to="/">Početna stranica</Link>
+        <Link to="/events">Događanja</Link>
+        <Link to="/calendar">Kalendar</Link>
+        <Link to="/about">Ko smo mi?</Link>
         <Link to="/contact">Kontakt</Link>
       </div>
     </nav>
@@ -82,17 +82,17 @@ function EventDetailWrapper() {
 
 // Kalender
 function Calendar() {
-  return <div className="p-6"><h2 className="text-2xl font-bold">Kalender (Platzhalter)</h2></div>;
+  return <div className="p-6"><h2 className="text-2xl font-bold">Kalendar (primjer)</h2></div>;
 }
 
 // Über uns
 function About() {
-  return <div className="p-6"><h2 className="text-2xl font-bold">Über uns</h2><p>Wir sind eine Eventplattform für deine Stadt.</p></div>;
+  return <div className="p-6"><h2 className="text-2xl font-bold">Ko smo mi?</h2><p>Wir sind eine Eventplattform für deine Stadt.</p></div>;
 }
 
 // Kontakt
 function Contact() {
-  return <div className="p-6"><h2 className="text-2xl font-bold">Kontakt</h2><p>Schreibe uns eine Nachricht.</p></div>;
+  return <div className="p-6"><h2 className="text-2xl font-bold">Kontakt</h2><p>Pošalji nam poruku.</p></div>;
 }
 
 // App-Komponente
