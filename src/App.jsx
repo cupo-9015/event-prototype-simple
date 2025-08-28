@@ -28,16 +28,16 @@ function Navbar() {
 function Home() {
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4">Finde Veranstaltungen in deiner Stadt</h2>
-      <input type="text" placeholder="Suche nach Events..." className="border p-2 w-full rounded mb-6" />
-      <h3 className="text-xl font-semibold mb-4">Highlights</h3>
+      <h2 className="text-2xl font-bold mb-4">Pronađi odgovarajući događaj u Trebinju</h2>
+      <input type="text" placeholder="Pretraži..." className="border p-2 w-full rounded mb-6" />
+      <h3 className="text-xl font-semibold mb-4">Najvažniji događaji</h3>
       <div className="grid md:grid-cols-3 gap-4">
         {events.map((event) => (
           <div key={event.id} className="border rounded-2xl shadow p-4">
             <img src={event.image} alt={event.title} className="rounded-t-2xl mb-2" />
             <h4 className="font-bold text-lg">{event.title}</h4>
             <p>{event.date} – {event.location}</p>
-            <Link to={`/events/${event.id}`} className="text-blue-600 underline mt-2 block">Mehr erfahren</Link>
+            <Link to={`/events/${event.id}`} className="text-blue-600 underline mt-2 block">Vidi više</Link>
           </div>
         ))}
       </div>
@@ -49,14 +49,14 @@ function Home() {
 function EventList() {
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4">Alle Veranstaltungen</h2>
+      <h2 className="text-2xl font-bold mb-4">Sva dodađanja</h2>
       <div className="grid md:grid-cols-3 gap-4">
         {events.map((event) => (
           <div key={event.id} className="border rounded-2xl shadow p-4">
             <img src={event.image} alt={event.title} className="rounded-t-2xl mb-2" />
             <h4 className="font-bold text-lg">{event.title}</h4>
             <p>{event.date} – {event.location}</p>
-            <Link to={`/events/${event.id}`} className="text-blue-600 underline mt-2 block">Details</Link>
+            <Link to={`/events/${event.id}`} className="text-blue-600 underline mt-2 block">Vidi više</Link>
           </div>
         ))}
       </div>
@@ -87,7 +87,7 @@ function Calendar() {
 
 // Über uns
 function About() {
-  return <div className="p-6"><h2 className="text-2xl font-bold">Ko smo mi?</h2><p>Wir sind eine Eventplattform für deine Stadt.</p></div>;
+  return <div className="p-6"><h2 className="text-2xl font-bold">Ko smo mi?</h2><p>Mi smo nezavisna platforma za događanja u Trebinju.</p></div>;
 }
 
 // Kontakt
